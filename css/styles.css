@@ -345,20 +345,23 @@ h6 {
   border-radius: 50%;
   background-color: var(--brand-color);
 }
-
 .media-team-link {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
-  fill: var(--light);
+  color: var(--light);
+}
+.media-team-icon-svg {
+  fill: currentColor;
 }
 .media-team-link:hover,
 .media-team-link:focus {
   background-color: var(--pressed-state);
   border-radius: 50%;
 }
+
 /* --- Customers--- */
 
 .customers-section {
@@ -389,11 +392,14 @@ h6 {
   height: 100%;
   border: 1px solid #8e8f99;
   border-radius: 4px;
-  fill: var(--subtle-text);
+  color: var(--subtle-text);
+}
+.customers-svg {
+  fill: currentColor;
 }
 .customers-link:hover,
 .customers-link:focus {
-  fill: var(--pressed-state);
+  color: var(--pressed-state);
   border: 1px solid var(--pressed-state);
 }
 
@@ -457,12 +463,15 @@ h6 {
   align-items: center;
   width: 100%;
   height: 100%;
-  fill: var(--light);
+  color: var(--light);
 }
 .media-footer-link:hover,
 .media-footer-link:focus {
   background-color: var(--success);
   border-radius: 50%;
+}
+.media-footer-svg {
+  fill: currentColor;
 }
 
 /* Buttons portfolio list */
