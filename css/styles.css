@@ -100,20 +100,6 @@ h6 {
   text-decoration: none;
 }
 
-.site-nav-item {
-  position: relative;
-}
-
-.site-nav-link.current::after {
-  position: absolute;
-  margin-top: 21px;
-  content: '';
-  display: flex;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--pressed-state);
-}
 .logo {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -138,6 +124,7 @@ h6 {
   text-transform: uppercase;
 }
 .site-nav-link {
+  position: relative;
   padding-top: 24px;
   padding-bottom: 24px;
   color: var(--dark);
@@ -149,6 +136,17 @@ h6 {
   text-align: left;
   transition: var(--transition);
   transition-property: color;
+}
+.site-nav-link.current::after {
+  position: absolute;
+  display: block;
+  content: '';
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--pressed-state);
 }
 
 /* Contacts */
@@ -174,6 +172,8 @@ h6 {
   text-align: left;
   text-decoration: none;
   font-style: normal;
+  transition: var(--transition);
+  transition-property: color;
 }
 .contacts .phone {
   padding-top: 24px;
@@ -186,6 +186,8 @@ h6 {
   text-align: left;
   text-decoration: none;
   font-style: normal;
+  transition: var(--transition);
+  transition-property: color;
 }
 .contacts .email:hover,
 .contacts .email:focus {
@@ -195,14 +197,7 @@ h6 {
 .contacts .phone:focus {
   color: var(--pressed-state);
 }
-.contacts .email {
-  transition: var(--transition);
-  transition-property: color;
-}
-.contacts .phone {
-  transition: var(--transition);
-  transition-property: color;
-}
+
 /*--- Section hero ---*/
 
 .hero {
@@ -250,14 +245,12 @@ h6 {
   cursor: pointer;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px #00000026;
+  transition: var(--transition);
+  transition-property: background-color;
 }
 .hero-button:hover,
 .hero-button:focus {
   background-color: var(--pressed-state);
-}
-.hero-button {
-  transition: var(--transition);
-  transition-property: background-color;
 }
 
 /*--- Section 1 ---*/
@@ -381,6 +374,9 @@ h6 {
   width: 100%;
   height: 100%;
   color: var(--light);
+  border-radius: 50%;
+  transition: var(--transition);
+  transition-property: background-color;
 }
 .media-team-icon-svg {
   fill: currentColor;
@@ -390,10 +386,7 @@ h6 {
   background-color: var(--pressed-state);
   border-radius: 50%;
 }
-.media-team-link {
-  transition: var(--transition);
-  transition-property: background-color;
-}
+
 /*--- Customers---*/
 
 .customers-section {
@@ -425,6 +418,8 @@ h6 {
   border: 1px solid #8e8f99;
   border-radius: 4px;
   color: var(--subtle-text);
+  transition-property: color;
+  transition: var(--transition);
 }
 .customers-svg {
   fill: currentColor;
@@ -433,10 +428,6 @@ h6 {
 .customers-link:focus {
   color: var(--pressed-state);
   border: 1px solid var(--pressed-state);
-}
-.customers-link {
-  transition-property: color, border;
-  transition: var(--transition);
 }
 
 /*--- Footer ---*/
@@ -500,15 +491,14 @@ h6 {
   width: 100%;
   height: 100%;
   color: var(--light);
+  border-radius: 50%;
+  transition-property: background-color;
+  transition: var(--transition);
 }
 .media-footer-link:hover,
 .media-footer-link:focus {
   background-color: var(--success);
   border-radius: 50%;
-}
-.media-footer-link {
-  transition-property: background-color;
-  transition: var(--transition);
 }
 .media-footer-svg {
   fill: currentColor;
@@ -559,15 +549,13 @@ h6 {
   background-color: var(--accent);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  transition-property: background-color;
+  transition: var(--transition);
 }
 .modal-btn:hover,
 .modal-btn:focus {
   fill: var(--white-text);
   background-color: var(--pressed-state);
-}
-.modal-btn {
-  transition-property: background-color;
-  transition: var(--transition);
 }
 
 /*--- Buttons portfolio list ---*/
@@ -589,6 +577,8 @@ h6 {
   cursor: pointer;
   border: none;
   border-radius: 4px;
+  transition-property: background-color;
+  transition: var(--transition);
 }
 .filter-btn {
   display: flex;
@@ -601,10 +591,6 @@ h6 {
   background-color: var(--pressed-state);
   box-shadow: 0px 2px 2px 0px #0000001f, 0px 2px 1px 0px #00000014,
     0px 3px 1px 0px #0000001a;
-}
-.filter-btn .btn {
-  transition-property: background-color;
-  transition: var(--transition);
 }
 
 /*--- Portfolio cards ---*/
